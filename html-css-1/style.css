@@ -103,8 +103,50 @@
 .container3 {
     height: 50vh;
     width: 100vw;
-    background-color: red;
+    background-color: white;
     display: flex;
     justify-content: space-between;
 }
 
+.box4 {
+    height: 40vh;
+    width: 30vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+    background-color: orange;
+}
+
+.box5 {
+    height: 40vh;
+    width: 30vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+    background-color: orange;
+}
+
+.container4 {
+    height: 50vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.elephant {
+    align-self: center;
+}
+
+.container5 {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    background-color: navy;
+}

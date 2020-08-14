@@ -146,7 +146,12 @@ let doubled = myNumbers.map(n => n*2);
 // Did you know that George Foreman has five sons named George? Go ahead and change everyone's name in the notGeorge array to George using .map. Store the resulting array in a variable named 'forTheLoveOfGeorge'.
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
-// Code Here
+const forTheLoveOFGeorge = arr => {
+	let result = arr.map(notGeorge => {
+		return `George`
+	})
+	return result
+}
 
 //////////////////PROBLEM 19////////////////////
 
