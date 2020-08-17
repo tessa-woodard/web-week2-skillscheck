@@ -94,22 +94,28 @@ me = {
 // Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
 
 function bigOrSmall(arr) {
-	for(let i = 0; i > 100; i++) {
-		return arr('big')
-		for(let i = 0; i <= 100; i++) {
-			return arr('small')
-		}
-		answers(arr[i])
+	const answers = [];
+	for(let i = 0; i < arr.length; i++) {
+	  if (arr[i] <= 100) {
+		answers.push('small');
+	  } else {
+		answers.push('big');
+	  }
 	}
-	return answers;
-}
-
-
+	return answers
+  }
+  
 //////////////////PROBLEM 13////////////////////
 
 // Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array variable. 
 
-//Code Here
+let arrayReverser = arr => {
+	let reversed = []
+	for(let i = arr.length -1; i >= 0; i--) {
+		reversed.push(arr[i])
+	}
+	return reversed
+}
 
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
@@ -127,19 +133,28 @@ let doubled = myNumbers.map(n => n*2);
 
 // Now, use .filter to create a new array containing any numbers that are greater than 100. Call the new array 'filtered'. 
 
-// Code Here
+let filtered = myNumbers.filter(n => n>100);
 
 //////////////////PROBLEM 16////////////////////
 
 // Next, use reduce to get the total of the numbers in the array summed together. Store the total in a new variable named 'total'. 
 
-// Code Here
+let total = 0;
+for (let i = 0; i < myNumbers.length; i++) {
+  total += myNumbers[i]
+}
 
 //////////////////PROBLEM 17////////////////////
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-// Code Here
+
+myNumberIndex = [];
+
+myNumbers.forEach(function(element, index, array) {
+	return 
+})
+
 
 //////////////////PROBLEM 18////////////////////
 
@@ -150,7 +165,7 @@ const forTheLoveOFGeorge = arr => {
 	let result = arr.map(notGeorge => {
 		return `George`
 	})
-	return result
+	return result 
 }
 
 //////////////////PROBLEM 19////////////////////
@@ -165,10 +180,14 @@ const people = [
 	{ name: 'Josh', friend: true, awesomeLevel: 7 }
 ]
 
-// Code Here
+let enemies = people.filter(people => {
+	return people.friend === false
+  })
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, get a total of the awesomeLevel from all the people, and store that value in a variable named 'totallyAwesome'. Use .reduce().
 
-// Code Here
+  let totallyAwesome = people.reduce((acc, person) => {
+	return acc + person.awesomeLevel 
+  }, 0)
