@@ -148,25 +148,15 @@ for (let i = 0; i < myNumbers.length; i++) {
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-
-myNumberIndex = [];
-
-myNumbers.forEach(function(element, index, array) {
-	return 
-})
-
+let myNumbersIndex = []
+myNumbers.forEach((e,i) => myNumbersIndex.push(i))
 
 //////////////////PROBLEM 18////////////////////
 
 // Did you know that George Foreman has five sons named George? Go ahead and change everyone's name in the notGeorge array to George using .map. Store the resulting array in a variable named 'forTheLoveOfGeorge'.
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
-const forTheLoveOFGeorge = arr => {
-	let result = arr.map(notGeorge => {
-		return `George`
-	})
-	return result 
-}
+let forTheLoveOfGeorge = notGeorge.map(() => 'George')
 
 //////////////////PROBLEM 19////////////////////
 
